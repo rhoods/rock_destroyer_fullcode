@@ -1,0 +1,96 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4054006b-02d0-496a-af85-356482d1c62b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>rock_destroyer_fullcode.py</StartupFile>
+    <SearchPath>classe;image;image;sounds</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>rock_destroyer_fullcode</Name>
+    <RootNamespace>rock_destroyer_fullcode</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'test' ">
+    <OutputPath>bin\test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="classe\Asteroide\Asteroide.py" />
+    <Compile Include="classe\balle\Balle.py" />
+    <Compile Include="classe\bouton\Bouton.py" />
+    <Compile Include="classe\player\Player.py" />
+    <Compile Include="rock_destroyer_fullcode.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="classe\" />
+    <Folder Include="classe\Asteroide\" />
+    <Folder Include="classe\Asteroide\__pycache__\" />
+    <Folder Include="classe\balle\" />
+    <Folder Include="classe\balle\__pycache__\" />
+    <Folder Include="classe\bouton\" />
+    <Folder Include="classe\bouton\__pycache__\" />
+    <Folder Include="classe\player\" />
+    <Folder Include="classe\player\__pycache__\" />
+    <Folder Include="image\" />
+    <Folder Include="image\asteroide\" />
+    <Folder Include="image\balle\" />
+    <Folder Include="image\bouton\" />
+    <Folder Include="image\fond\" />
+    <Folder Include="image\player\" />
+    <Folder Include="sounds\" />
+    <Folder Include="sounds\son_lose\" />
+    <Folder Include="sounds\son_music\" />
+    <Folder Include="sounds\son_rockdestroy\" />
+    <Folder Include="sounds\son_shoot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="classe\Asteroide\__pycache__\Asteroide.cpython-38.pyc" />
+    <Content Include="classe\balle\__pycache__\Balle.cpython-38.pyc" />
+    <Content Include="classe\bouton\__pycache__\Bouton.cpython-38.pyc" />
+    <Content Include="classe\player\__pycache__\Player.cpython-38.pyc" />
+    <Content Include="image\asteroide\spr_big_asteroid.png" />
+    <Content Include="image\asteroide\spr_mini_asteroid.png" />
+    <Content Include="image\balle\spr_balle.png" />
+    <Content Include="image\bouton\spr_bouton.png" />
+    <Content Include="image\fond\background.png" />
+    <Content Include="image\player\spr_player.png" />
+    <Content Include="sounds\son_lose\son_lose.wav" />
+    <Content Include="sounds\son_lose\son_lose.yy" />
+    <Content Include="sounds\son_music\son_music.mp3" />
+    <Content Include="sounds\son_music\son_music.yy" />
+    <Content Include="sounds\son_rockdestroy\son_rockdestroy.wav" />
+    <Content Include="sounds\son_shoot\son_shoot.wav" />
+    <Content Include="sounds\son_shoot\son_shoot.yy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.8</Version>
+      <Description>env (Python 3.8 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
